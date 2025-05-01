@@ -40,3 +40,9 @@ uvicorn==0.34.2
 virtualenv==20.30.0
 watchfiles==1.0.5
 websockets==15.0.1
+sqlalchemy
+asyncpg
+pyjwt
+python-multipart 
+bcrypt==4.0.1
+passlib
