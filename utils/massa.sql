@@ -1,12 +1,6 @@
--- Limpeza inicial das tabelas (opcional - descomente se necessário)
--- TRUNCATE TABLE public.item CASCADE;
--- TRUNCATE TABLE public.todo_list CASCADE;
--- TRUNCATE TABLE public."user" CASCADE;
 
--- Inserção de usuários com senhas hashadas
--- As senhas foram hashadas com bcrypt (custo 12)
 INSERT INTO public.usuario (user_id, nome_usuario, email, senha, data_criacao) VALUES
-(1, 'johndoe', 'secret', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', '2023-01-15 09:30:00'),
+(1, 'johndoe', 'johndoe@gmail.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', '2023-01-15 09:30:00'),
 (2, 'maria_admin', 'maria@admin.com', '$2a$12$8Hj3Vp6N2sA7fL5qR9dW.uKv7XyZ1wC3bRn4tS5yV6mB8n9D0E1F2', '2023-02-20 14:15:00'),
 (3, 'carlos_user', 'carlos@user.com', '$2a$12$3Mk5P7q9R1sT2V4X6Y8Z.A0B1C2D3E4F5G6H7I8J9K0L1M2N3O4P', '2023-03-10 10:00:00'),
 (4, 'ana_tech', 'ana@tech.com', '$2a$12$2L4N6P8R0T1V3X5Z7Y9A.B1C3D5E7F9G1H2J3K4L5M6N7O8P9Q0', '2023-04-05 16:45:00'),
@@ -53,12 +47,4 @@ INSERT INTO public.item (item_id, todo_list_id, titulo, descricao, concluido) VA
 (17, 6, 'Contêinerização', 'Dockerizar aplicações legacy', false),
 (18, 6, 'Infra como Código', 'Atualizar scripts Terraform', false);
 
-joao_dev: "Dev@1234"
-
-maria_admin: "Admin@5678"
-
-carlos_user: "User@9012"
-
-ana_tech: "Tech#3456"
-
-pedro_devops: "DevOps$7890"
+johndoe: "secret"
