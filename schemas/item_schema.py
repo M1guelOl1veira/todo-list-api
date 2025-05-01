@@ -1,7 +1,7 @@
 
 from pydantic import BaseModel
 
-class ItemListPublic(BaseModel):
+class ItemPublic(BaseModel):
     item_id: int
     descricao: str
     concluido: bool

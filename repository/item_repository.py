@@ -10,3 +10,7 @@ class ItemRepository:
             result = await session.execute(select(Item).where(Item.todo_list_id == todo_list_id))
             return result.scalars().all()
     
+    async def get_item_by_id(item_id: int):
+        async with async_session() as session:
+            result = await session.execute(select(Item).where(Item.item_id == item_id))
+            return result.scalar()

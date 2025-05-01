@@ -22,7 +22,7 @@ async def login_for_access_token(
             detail="Nome de usuário ou senha incorretos",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    access_token_expires = timedelta(minutes=600)
+    access_token_expires = timedelta(minutes=10080)
     access_token = UserService.create_access_token(
         data={"sub": user.nome_usuario}, expires_delta=access_token_expires
     )
