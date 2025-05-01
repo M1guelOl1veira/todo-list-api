@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+asyncpg = "*"
+sqlalchemy = "*"
+pyjwt = "*"
+passlib = {extras = ["bcrypt"], version = "*"}
+python-multipart = "*"
+bcrypt = "==4.0.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"

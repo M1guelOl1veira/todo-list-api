@@ -1,0 +1,12 @@
+from sqlalchemy.future import select
+from sqlalchemy.ext.asyncio.session import async_session
+from utils.database import async_session
+from utils.db_models import Item
+
+
+class ItemRepository:
+    async def get_by_todo_list_id(todo_list_id: int):
+        async with async_session() as session:
+            result = await session.execute(select(Item).where(Item.todo_list_id == todo_list_id))
+            return result.scalars().all()
+    
